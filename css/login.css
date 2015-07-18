@@ -1,24 +1,16 @@
 /*
-Login Page CSS
-
-Theme Name: Curriki
-Theme URI: http://www.curriki.org/
-Description: Curriki child theme created for the Genesis Framework.
-Author: Orange Blossom Media
-Author URI: http://www.orangeblossommedia.com/
+ * Login Page CSS
+ *
+ * Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+ * Author: Orange Blossom Media
+ * Url: http://orangeblossommedia.com/
 */
 
 
-body.login {} 
-
+body.login {}
 
 #login {} /* the form box */
 
-/*
-This is the Wordpress logo in the admin area.
-You'll have to load your own images and mess
-with the width and height.
-*/
 .login h1 a {
 	background: url(images/login-logo.png) no-repeat top center; /* make sure to replace this! */
 	width: 326px;
@@ -62,8 +54,4 @@ body form .input {
 			box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
 }
 
-/*
-You'll have to override some of the default styles
-but since we're referencing the id, it should be easy.
-*/
 #wp-submit {} /* login button*/

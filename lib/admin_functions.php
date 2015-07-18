@@ -78,7 +78,7 @@ function obm_custom_toolbar() {
 
 
 // Alternatively, remove the admin bar entirely for non-admins
-// add_action('after_setup_theme', 'obm_remove_admin_bar');
+add_action('after_setup_theme', 'obm_remove_admin_bar');
 function obm_remove_admin_bar() {
 
 	if (!current_user_can( 'manage_options' )) {

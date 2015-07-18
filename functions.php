@@ -93,10 +93,10 @@ function obm_theme_setup() {
 	add_theme_support( 'genesis-footer-widgets', 2 );
 
 	// Home page widgets
-	genesis_register_sidebar( array(
-	 	'id'			=> 'home-hero',
-	 	'name'			=> __( 'Home Hero', 'obm_theme' ),
-	 ) );
+	// genesis_register_sidebar( array(
+	//  	'id'			=> 'home-hero',
+	//  	'name'			=> __( 'Home Hero', 'obm_theme' ),
+	//  ) );
 
 
 	/* --- <HEAD> ELEMENTS --- */
