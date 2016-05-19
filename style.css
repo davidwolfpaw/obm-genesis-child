@@ -333,22 +333,77 @@ img {
 /* ## Forms
 --------------------------------------------- */
 
-input,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 select,
 textarea {
-	background-color: #fff;
-	border: 1px solid #ddd;
-	color: #333;
-	font-size: 18px;
-	font-weight: 300;
-	padding: 16px;
+	border-color: #e0e0e0;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+	border-width: 1px;
+	border-style: solid;
+	color: #474e57;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px;
 	width: 100%;
 }
 
-input:focus,
-textarea:focus {
-	border: 1px solid #999;
+input[type="color"]:hover,
+input[type="date"]:hover,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:hover,
+input[type="email"]:hover,
+input[type="month"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover,
+input[type="time"]:hover,
+input[type="url"]:hover,
+input[type="week"]:hover,
+textarea:hover, select:hover {
+	border-color: #e0e0e0;
+}
+
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus, select:focus {
+	border-color: #adadad;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(160, 160, 160, 0.7);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(160, 160, 160, 0.7);
 	outline: none;
+}
+
+input[type="color"] {
+	padding: 5px;
 }
 
 input[type="checkbox"],
@@ -357,33 +412,43 @@ input[type="radio"] {
 	width: auto;
 }
 
-::-moz-placeholder {
-	color: #333;
-	font-weight: 300;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #c7c7c7;
 	opacity: 1;
+	font-weight: 400;
 }
 
-::-webkit-input-placeholder {
-	color: #333;
-	font-weight: 300;
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 400;
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-.button {
-	background-color: #333;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 16px 24px;
-	text-transform: uppercase;
-	width: auto;
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 400;
 }
 
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 400;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 400;
+}
+
+
+/*
 .footer-widgets button,
 .footer-widgets input[type="button"],
 .footer-widgets input[type="reset"],
@@ -415,14 +480,9 @@ input:hover[type="submit"],
 	color: #333;
 }
 
-.button {
-	display: inline-block;
-}
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button {
-	display: none;
-}
+
+*/
 
 /* ## Tables
 --------------------------------------------- */
