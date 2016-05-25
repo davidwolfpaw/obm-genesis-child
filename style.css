@@ -128,7 +128,7 @@ input[type="search"] {
 
 body {
 	background-color: #f5f5f5;
-	color: #333;
+	color: #333333;
 	font-family: sans-serif;
 	font-size: 18px;
 	font-weight: 300;
@@ -153,12 +153,12 @@ textarea:focus,
 }
 
 ::-moz-selection {
-	background-color: #333;
+	background-color: #333333;
 	color: #ffffff;
 }
 
 ::selection {
-	background-color: #333;
+	background-color: #333333;
 	color: #ffffff;
 }
 
@@ -168,7 +168,7 @@ a {
 }
 
 a:hover {
-	color: #333;
+	color: #333333;
 }
 
 p {
@@ -222,7 +222,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #333;
+	color: #333333;
 	font-family: sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
@@ -261,8 +261,13 @@ iframe,
 img,
 object,
 video,
+figure,
 .wp-caption {
 	max-width: 100%;
+}
+
+figure {
+	margin: 1em auto;
 }
 
 img {
@@ -470,11 +475,8 @@ input:hover[type="submit"],
 .footer-widgets input:hover[type="submit"],
 .footer-widgets .button:hover {
 	background-color: #ffffff;
-	color: #333;
+	color: #333333;
 }
-
-
-
 
 
 /* ## Tables
@@ -736,7 +738,7 @@ th {
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: #333333;
 }
 
 .entry-title a:hover {
@@ -783,28 +785,28 @@ a.alignright {
 img.centered,
 .aligncenter {
 	display: block;
-	margin: 0 auto 24px;
+	margin: 1em auto;
 }
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 12px;
+	margin: 1em auto;
 }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 24px 24px 0;
+	margin: 0 1em 1em 0;
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 24px 24px;
+	margin: 0 0 1em 1em;
 }
 
 .wp-caption-text {
-	font-size: 14px;
+	font-size: 0.8em;
 	font-weight: 700;
 	text-align: center;
 }
@@ -876,12 +878,12 @@ img.alignright,
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: #333333;
 }
 
 .enews-widget input,
 .enews-widget input:focus {
-	border: 1px solid #333;
+	border: 1px solid #333333;
 }
 
 .enews-widget input {
@@ -898,7 +900,7 @@ img.alignright,
 
 .enews-widget input:hover[type="submit"] {
 	background-color: #ffffff;
-	color: #333;
+	color: #333333;
 }
 
 .enews form + p {
@@ -946,7 +948,7 @@ img.alignright,
 
 .site-title a,
 .site-title a:hover {
-	color: #333;
+	color: #333333;
 }
 
 .header-image .site-title > a {
@@ -999,7 +1001,7 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #333333;
 	display: block;
 	padding: 30px 24px;
 }
@@ -1093,7 +1095,7 @@ img.alignright,
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
+	background-color: #333333;
 }
 
 .nav-primary .genesis-nav-menu a {
@@ -1101,7 +1103,7 @@ img.alignright,
 }
 
 .nav-primary .genesis-nav-menu .sub-menu a {
-	color: #333;
+	color: #333333;
 }
 
 .nav-primary .genesis-nav-menu a:hover,
@@ -1136,7 +1138,7 @@ img.alignright,
 .sidr .sidr-inner>p{margin-left:15px;margin-right:15px}
 .sidr.right{left:auto;right:-250px}
 .sidr.left{left:-250px;right:auto}
-.sidr h1,.sidr h2,.sidr h3,.sidr h4,.sidr h5,.sidr h6{font-size:11px;font-weight:normal;padding:0 15px;margin:0 0 5px;color:#333;line-height:24px;}
+.sidr h1,.sidr h2,.sidr h3,.sidr h4,.sidr h5,.sidr h6{font-size:11px;font-weight:normal;padding:0 15px;margin:0 0 5px;color:#333333;line-height:24px;}
 .sidr p{font-size:13px;margin:0 0 12px}
 .sidr p a{color:#03f2d5}
 .sidr>p{margin-left:15px;margin-right:15px}
@@ -1185,7 +1187,7 @@ img.alignright,
 }
 
 .entry-content code {
-	background-color: #333;
+	background-color: #333333;
 	color: #ddd;
 }
 
@@ -1233,7 +1235,7 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #333;
+	background-color: #333333;
 	color: #ffffff;
 	cursor: pointer;
 	display: inline-block;
@@ -1346,7 +1348,7 @@ li.comment {
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #333;
+	background-color: #333333;
 	clear: both;
 	padding-top: 40px;
 }
@@ -1357,7 +1359,7 @@ li.comment {
 }
 
 .footer-widgets input {
-	border: 1px solid #333;
+	border: 1px solid #333333;
 }
 
 .footer-widgets a.button,
