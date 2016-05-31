@@ -212,6 +212,13 @@ blockquote::before {
 	top: -10px;
 }
 
+pre {
+	tab-size: 4;
+	overflow: auto;
+	white-space: pre-wrap;
+	width: 100%;
+}
+
 
 /* ## Headings
 --------------------------------------------- */
@@ -478,6 +485,21 @@ input:hover[type="submit"],
 	color: #333333;
 }
 
+.gform_wrapper .gform_body .gform_fields .gfield,
+.gform_wrapper .gform_body .gform_fields .gfield.gf_left_half,
+.gform_wrapper .gform_body .gform_fields .gfield.gf_right_half {
+	margin-bottom: 1.5625rem;
+}
+
+.gform_wrapper .gfield_label {
+	color: #333333;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.gform_wrapper textarea {
+	width: 100%;
+}
 
 /* ## Tables
 --------------------------------------------- */
@@ -1569,6 +1591,52 @@ li.comment {
 
 	.sidebar .widget.enews-widget {
 		padding: 40px;
+	}
+
+	.gform_wrapper select {
+		width: 49%;
+	}
+
+	.gform_wrapper .gform_body .gform_fields .gfield select,
+	.gform_wrapper.gf_browser_chrome .gform_body .gform_fields .gfield select {
+		width: 49% !important;
+	}
+
+	#content .gform_wrapper input[type="text"],
+	#content .gform_wrapper input[type="url"],
+	#content .gform_wrapper input[type="email"],
+	#content .gform_wrapper input[type="tel"],
+	#content .gform_wrapper input[type="number"],
+	#content .gform_wrapper input[type="password"],
+	#content .gform_wrapper input[type="file"],
+	#content .gform_wrapper textarea {
+		width: 49%;
+	}
+
+	#content .gform_wrapper .gf_left_half,
+	#content .gform_wrapper .gf_right_half {
+		width: 49%;
+	}
+
+	#content .gform_wrapper .gf_left_half input[type="text"],
+	#content .gform_wrapper .gf_left_half input[type="url"],
+	#content .gform_wrapper .gf_left_half input[type="email"],
+	#content .gform_wrapper .gf_left_half input[type="tel"],
+	#content .gform_wrapper .gf_left_half input[type="number"],
+	#content .gform_wrapper .gf_left_half input[type="password"],
+	#content .gform_wrapper .gf_left_half input[type="file"],
+	#content .gform_wrapper .gf_right_half input[type="text"],
+	#content .gform_wrapper .gf_right_half input[type="url"],
+	#content .gform_wrapper .gf_right_half input[type="email"],
+	#content .gform_wrapper .gf_right_half input[type="tel"],
+	#content .gform_wrapper .gf_right_half input[type="number"],
+	#content .gform_wrapper .gf_right_half input[type="password"],
+	#content .gform_wrapper .gf_right_half input[type="file"] {
+		width: 100%;
+	}
+
+	#content .gform_wrapper .gf_left_half {
+		margin-right: 2%;
 	}
 
 }
