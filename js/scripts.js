@@ -3,9 +3,9 @@
  *
  * This file should contain any JavaScript you want to add to the site.
  *
- * Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+ * Child Theme Name: OBM-Geneis-Child
  * Author: Orange Blossom Media
- * Url: http://orangeblossommedia.com/
+ * Url: https://orangeblossommedia.com/
  */
 
 // as the page loads, call these scripts
