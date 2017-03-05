@@ -2,9 +2,9 @@
 /*
  * CHILD THEME FUNCTIONS
  *
- * Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+ * Child Theme Name: OBM-Geneis-Child
  * Author: Orange Blossom Media
- * Url: http://orangeblossommedia.com/
+ * Url: https://orangeblossommedia.com/
  *
  * Add any functions here that you wish to use sitewide.
  */

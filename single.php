@@ -2,9 +2,9 @@
 /*
  * Single Post Template
  *
- * Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+ * Child Theme Name: OBM-Geneis-Child
  * Author: Orange Blossom Media
- * Url: http://orangeblossommedia.com/
+ * Url: https://orangeblossommedia.com/
  */
 
 // Remove the post info function and/or reposition

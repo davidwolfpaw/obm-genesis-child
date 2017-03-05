@@ -5,9 +5,9 @@
 * This file contains functions that setup the child theme,
 * such as registering and enqueueing scripts and styles.
 *
-* Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+* Child Theme Name: OBM-Geneis-Child
 * Author: Orange Blossom Media
-* Url: http://orangeblossommedia.com/
+* Url: https://orangeblossommedia.com/
 *
 */
 
@@ -30,6 +30,7 @@ function obm_scripts_and_styles() {
     // Register scripts to load in site footer
     wp_register_script( 'obm-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '' );
     wp_register_script( 'obm-sidr', get_stylesheet_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'obm-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
     // Enqueue styles
     wp_enqueue_style( 'obm-stylesheet' );
@@ -40,6 +41,7 @@ function obm_scripts_and_styles() {
     wp_enqueue_script( 'obm-js' );
     wp_enqueue_script( 'obm-modernizr' );
     wp_enqueue_script( 'obm-sidr' );
+    wp_enqueue_script( 'obm-responsive-menu' );
 
     // deregister the superfish scripts
     wp_deregister_script( 'superfish' );

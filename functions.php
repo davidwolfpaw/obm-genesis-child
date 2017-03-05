@@ -1,6 +1,6 @@
 <?php
 /*
-* Child Theme Name: OBM-Geneis-Child for Genesis v2.1.2
+* Child Theme Name: OBM-Geneis-Child
 * Author: Orange Blossom Media
 * Url: http://orangeblossommedia.com/
 */
@@ -27,6 +27,9 @@ function obm_theme_setup() {
 
 	// Child theme admin area functions
 	include_once( CHILD_DIR . '/lib/admin_functions.php');
+
+	// Setup theme defaults
+	include_once( get_stylesheet_directory() . '/lib/theme_defaults.php' );
 
 	// Mobile Detection PHP support
 	// https://github.com/serbanghita/Mobile-Detect
