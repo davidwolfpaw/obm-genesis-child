@@ -1780,6 +1780,13 @@ p.entry-meta {
 
 }
 
+@media only screen and (max-width: 600px) {
+
+	/* partial fix to admin bar moving on sidr open */
+	body.sidr-open #wpadminbar {
+		top: -46px;
+	}
+
 
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
