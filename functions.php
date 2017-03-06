@@ -16,7 +16,7 @@ define( 'CHILD_THEME_URL', 'http://www.obm-genesis-child.com/' );
 
 // Activate the child theme
 // All core child theme actions and filters hooked here
-add_action('genesis_setup','obm_theme_setup', 15);
+add_action( 'genesis_setup','obm_theme_setup', 15 );
 function obm_theme_setup() {
 
 	// Sets up child, including scripts and styles

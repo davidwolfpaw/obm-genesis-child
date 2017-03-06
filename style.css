@@ -1241,6 +1241,21 @@ img.alignright,
 
 /* ## Responsive Navigation
 --------------------------------------------- */
+
+.responsive-menu-icon {
+	cursor: pointer;
+	display: none;
+}
+
+.responsive-menu-icon::before {
+	content: "\f333";
+	display: block;
+	font: normal 20px/1 'dashicons';
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
 .sidr{display:block;position:fixed;top:0;height:100%;z-index:999999;width:260px;overflow-x:hidden;overflow-y:auto}
 .sidr.right{left:auto;right:-260px}
 .sidr.left{left:-260px;right:auto}

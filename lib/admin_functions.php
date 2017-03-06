@@ -12,7 +12,7 @@
 /* --- DASHBOARD WIDGETS AND MENUS --- */
 
 // Disable default dashboard widgets for all users
-add_action('admin_menu', 'obm_disable_dashboard_widgets');
+add_action( 'admin_menu', 'obm_disable_dashboard_widgets' );
 function obm_disable_dashboard_widgets() {
 
 	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' );			// Activity Widget
@@ -58,19 +58,19 @@ function obm_custom_toolbar() {
 
 	if ( !current_user_can( 'manage_options' ) ) {
 
-	    $wp_admin_bar->remove_menu('wp-logo');			// WordPress logo
-	    $wp_admin_bar->remove_menu('about');			// About WordPress link
-	    $wp_admin_bar->remove_menu('wporg');			// WordPress.org link
-	    $wp_admin_bar->remove_menu('documentation');	// WordPress documentation link
-	    $wp_admin_bar->remove_menu('support-forums');	// Support forums link
-	    $wp_admin_bar->remove_menu('feedback');			// Feedback link
-	    $wp_admin_bar->remove_menu('site-name');		// Site name menu
-	    $wp_admin_bar->remove_menu('view-site');		// View site link
-	    $wp_admin_bar->remove_menu('updates');			// Updates link
-	    $wp_admin_bar->remove_menu('comments');			// Comments link
-	    $wp_admin_bar->remove_menu('new-content');		// Content link
-	    $wp_admin_bar->remove_menu('my-account');		// User details tab
-	    $wp_admin_bar->remove_menu('my-sites');			// User details tab
+	    $wp_admin_bar->remove_menu( 'wp-logo' );		// WordPress logo
+	    $wp_admin_bar->remove_menu( 'about' );			// About WordPress link
+	    $wp_admin_bar->remove_menu( 'wporg' );			// WordPress.org link
+	    $wp_admin_bar->remove_menu( 'documentation' );	// WordPress documentation link
+	    $wp_admin_bar->remove_menu( 'support-forums' );	// Support forums link
+	    $wp_admin_bar->remove_menu( 'feedback' );		// Feedback link
+	    $wp_admin_bar->remove_menu( 'site-name' );		// Site name menu
+	    $wp_admin_bar->remove_menu( 'view-site' );		// View site link
+	    $wp_admin_bar->remove_menu( 'updates' );		// Updates link
+	    $wp_admin_bar->remove_menu( 'comments' );		// Comments link
+	    $wp_admin_bar->remove_menu( 'new-content' );	// Content link
+	    $wp_admin_bar->remove_menu( 'my-account' );		// User details tab
+	    $wp_admin_bar->remove_menu( 'my-sites' );		// User details tab
 
 	}
 
@@ -78,7 +78,7 @@ function obm_custom_toolbar() {
 
 
 // Alternatively, remove the admin bar entirely for non-admins
-add_action('after_setup_theme', 'obm_remove_admin_bar');
+add_action( 'after_setup_theme', 'obm_remove_admin_bar' );
 function obm_remove_admin_bar() {
 
 	if (!current_user_can( 'manage_options' )) {
