@@ -46,8 +46,8 @@ jQuery(document).ready(function($) {
 
     } /* end larger than 481px */
 
-    /* if is below 768px */
-    if (responsive_viewport < 768) {
+    /* if is below 960px */
+    if (responsive_viewport < 960) {
 
         /* load gravatars */
         $('.comment img[data-gravatar]').each(function(){
@@ -59,23 +59,36 @@ jQuery(document).ready(function($) {
         (function( $ ) {
             "use strict";
             $(function() {
-            // Slide-Out Menu
 
                 /* prepend menu icon */
-                $('.nav-primary-wrap .wrap').prepend('<div id="mobile-header"><a class="responsive-menu-button fa fa-bars" href="#sidr"></a></div>');
+                $('header .genesis-nav-menu, .nav-primary .genesis-nav-menu').addClass('responsive-menu').before('<div class="responsive-menu-icon-sidr"><span class="fa fa-bars"></span>menu</div>');
 
-                $('.responsive-menu-button').sidr({
-                    name: 'sidr',
+                $('.responsive-menu-icon-sidr').sidr({
                     source: '.nav-primary',
                     side: 'left',
+                    speed: 200,
+                    displace: true,
+                    bind: 'touchstart click',
                     onOpen: function () {
-                        $('.responsive-menu-button').addClass('fa fa-close');
-                        $('.responsive-menu-button').removeClass('fa fa-bars');
+                        $('.responsive-menu-icon-sidr span').addClass('fa-close');
+                        $('.responsive-menu-icon-sidr span').removeClass('fa-bars');
                     },
                     onClose: function () {
-                        $('.responsive-menu-button').addClass('fa fa-bars');
-                        $('.responsive-menu-button').removeClass('fa fa-close');
+                        $('.responsive-menu-icon-sidr span').addClass('fa-bars');
+                        $('.responsive-menu-icon-sidr span').removeClass('fa-close');
                     },
+                });
+
+                // Close sidr menu on window resize
+                $( window ).resize(function () {
+                    $.sidr('close', 'sidr');
+                });
+
+                // Add overlay and close on overlay click
+                $('.nav-primary').append('<div id="sidr-overlay"></div>');
+
+                $('#sidr-overlay').click(function () {
+                    $.sidr('close', 'sidr');
                 });
 
 

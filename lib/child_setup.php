@@ -22,14 +22,14 @@ function obm_scripts_and_styles() {
 	wp_register_style( 'obm-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 
     // Font Awesome http://fortawesome.github.io/Font-Awesome
-    wp_register_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' , array(), '4.3.0', 'all' );
+    wp_register_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' , array(), '4.7.0', 'all' );
 
     // Register scripts to load in site header
-    wp_register_script( 'obm-modernizr', get_stylesheet_directory_uri() . '/js/modernizr.custom.min.js', '', '2.8.3' );
+    wp_register_script( 'obm-modernizr', get_stylesheet_directory_uri() . '/js/modernizr.custom.min.js', '', '3.3.1', true );
 
     // Register scripts to load in site footer
-    wp_register_script( 'obm-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '' );
-    wp_register_script( 'obm-sidr', get_stylesheet_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'obm-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0' );
+    wp_register_script( 'obm-sidr', get_stylesheet_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '2.2.1', true );
     wp_register_script( 'obm-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
     // Enqueue styles
@@ -41,7 +41,7 @@ function obm_scripts_and_styles() {
     wp_enqueue_script( 'obm-js' );
     wp_enqueue_script( 'obm-modernizr' );
     wp_enqueue_script( 'obm-sidr' );
-    wp_enqueue_script( 'obm-responsive-menu' );
+    // wp_enqueue_script( 'obm-responsive-menu' );
 
     // deregister the superfish scripts
     wp_deregister_script( 'superfish' );
