@@ -1,6 +1,6 @@
 <?php
 
-//* OBM-Geneis-Child Theme Setting Defaults
+//* OBM-Genesis-Child Theme Setting Defaults
 add_filter( 'genesis_theme_settings_defaults', 'obm_theme_theme_defaults' );
 function obm_theme_theme_defaults( $defaults ) {
 
@@ -16,7 +16,7 @@ function obm_theme_theme_defaults( $defaults ) {
 
 }
 
-//* OBM-Geneis-Child Theme Setup
+//* OBM-Genesis-Child Theme Setup
 add_action( 'after_switch_theme', 'obm_theme_theme_setting_defaults' );
 function obm_theme_theme_setting_defaults() {
 

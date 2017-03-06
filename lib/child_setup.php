@@ -5,7 +5,7 @@
 * This file contains functions that setup the child theme,
 * such as registering and enqueueing scripts and styles.
 *
-* Child Theme Name: OBM-Geneis-Child
+* Child Theme Name: OBM-Genesis-Child
 * Author: Orange Blossom Media
 * Url: https://orangeblossommedia.com/
 *

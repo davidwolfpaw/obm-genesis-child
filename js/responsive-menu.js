@@ -1,7 +1,7 @@
 /*
  * Responsive Menu Script
  *
- * Child Theme Name: OBM-Geneis-Child
+ * Child Theme Name: OBM-Genesis-Child
  * Author: Orange Blossom Media
  * Url: https://orangeblossommedia.com/
  */
