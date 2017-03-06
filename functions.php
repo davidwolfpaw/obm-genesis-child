@@ -2,7 +2,7 @@
 /*
 * Child Theme Name: OBM-Geneis-Child
 * Author: Orange Blossom Media
-* Url: http://orangeblossommedia.com/
+* Url: https://orangeblossommedia.com/
 */
 
 /* --- DEFINE CHILD THEME --- */
