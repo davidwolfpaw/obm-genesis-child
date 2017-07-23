@@ -9,7 +9,7 @@
 
 // CHILD_DIR defined in Genesis
 define( 'CHILD_THEME_NAME', 'obm-genesis-child' );
-define( 'CHILD_THEME_URL', 'http://www.obm-genesis-child.com/' );
+define( 'CHILD_THEME_URL', 'http://obm-genesis-child.com/' );
 
 /* --- THEME SETUP --- */
 
@@ -43,7 +43,13 @@ function obm_theme_setup() {
 	/* --- THEME SUPPORT --- */
 
 	// Turn On HTML5 Markup @since GENESIS 2.0 final
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption'
+	) );
 
 	// Add structural support
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -75,22 +81,22 @@ function obm_theme_setup() {
 	// Remove Genesis Widgets
 	add_action( 'widgets_init', 'obm_remove_genesis_widgets', 20 );
 	function obm_remove_genesis_widgets() {
-		unregister_widget( 'Genesis_eNews_Updates' );
-		unregister_widget( 'Genesis_Featured_Page' );
-		unregister_widget( 'Genesis_Featured_Post' );
-		unregister_widget( 'Genesis_Latest_Tweets_Widget' );
-		unregister_widget( 'Genesis_Menu_Pages_Widget' );
-		unregister_widget( 'Genesis_User_Profile_Widget' );
-		unregister_widget( 'Genesis_Widget_Menu_Categories' );
+		// unregister_widget( 'Genesis_eNews_Updates' );
+		// unregister_widget( 'Genesis_Featured_Page' );
+		// unregister_widget( 'Genesis_Featured_Post' );
+		// unregister_widget( 'Genesis_Latest_Tweets_Widget' );
+		// unregister_widget( 'Genesis_Menu_Pages_Widget' );
+		// unregister_widget( 'Genesis_User_Profile_Widget' );
+		// unregister_widget( 'Genesis_Widget_Menu_Categories' );
 	}
 
 
 	/* --- SIDEBARS AND WIDGETS --- */
 
 	// Remove Sidebars
-	//unregister_sidebar( 'header-right' );
+	// unregister_sidebar( 'header-right' );
 	// unregister_sidebar( 'sidebar' );
-	unregister_sidebar( 'sidebar-alt' );
+	// unregister_sidebar( 'sidebar-alt' );
 
 	// Add footer widgets (second argument is number of widgets)
 	add_theme_support( 'genesis-footer-widgets', 2 );
@@ -115,9 +121,6 @@ function obm_theme_setup() {
 	// Add viewport meta tag for mobile browsers @since GENESIS 2.0
 	add_theme_support( 'genesis-responsive-viewport' );
 
-	// Change favicon location
-	add_filter( 'genesis_pre_load_favicon', 'obm_custom_favicon_location' );
-
 
 	/* --- CLEANING <HEAD> --- */
 
@@ -125,12 +128,6 @@ function obm_theme_setup() {
 	remove_action( 'wp_head', 'rsd_link' );
 	// Remove Windows Live Writer
 	remove_action( 'wp_head', 'wlwmanifest_link' );
-	// Remove index link
-	remove_action( 'wp_head', 'index_rel_link' );
-	// Remove previous link
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-	// Remove start link
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 	// Remove links for adjacent posts
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 	// Remove WP version
@@ -151,7 +148,7 @@ function obm_theme_setup() {
 		* You can change the names and dimensions to whatever you like.
 	*/
 
-	add_image_size( 'obm_featured_img', 600, 400, TRUE );
+	// add_image_size( 'obm_featured_img', 600, 400, TRUE );
 
 
 	// Change image to default to no link
