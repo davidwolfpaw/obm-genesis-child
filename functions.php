@@ -69,17 +69,15 @@ function obm_theme_setup() {
 	) );
 
 
-	/* --- UNREGISTER LAYOUTS AND WIDGETS --- */
+	/* --- LAYOUTS, SIDEBARS, AND WIDGETS --- */
 
+	// Remove Page Template Layouts
 	genesis_unregister_layout( 'content-sidebar-sidebar' );
 	genesis_unregister_layout( 'sidebar-sidebar-content' );
 	genesis_unregister_layout( 'sidebar-content-sidebar' );
 	// genesis_unregister_layout( 'content-sidebar' );
 	// genesis_unregister_layout( 'sidebar-content' );
 	// genesis_unregister_layout( 'full-width-content' );
-
-
-	/* --- SIDEBARS AND WIDGETS --- */
 
 	// Remove Sidebars
 	// unregister_sidebar( 'header-right' );
@@ -99,7 +97,6 @@ function obm_theme_setup() {
 	/* --- <HEAD> ELEMENTS --- */
 
 	// Remove default stylesheet
-	// See /lib/child_setup.php
 	remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 
 	// Enqueue base scripts and styles
@@ -108,9 +105,6 @@ function obm_theme_setup() {
 
 	// Add viewport meta tag for mobile browsers @since GENESIS 2.0
 	add_theme_support( 'genesis-responsive-viewport' );
-
-
-	/* --- CLEANING <HEAD> --- */
 
 	// Remove rsd link
 	remove_action( 'wp_head', 'rsd_link' );
@@ -169,18 +163,18 @@ function obm_theme_setup() {
 
 	/* --- FOOTER AREA --- */
 
-	// footer credit & attribution text
+	// Add footer credit & attribution text
 	add_filter( 'genesis_footer_creds_text', 'obm_footer_cred' );
 
 
 	/* --- POSTS --- */
 
 	// Remove Post Meta
-	remove_action( 'genesis_before_post_content', 'genesis_post_info', 99 );
-	remove_action( 'genesis_before_entry_content', 'genesis_post_info', 99 );
+	// remove_action( 'genesis_before_post_content', 'genesis_post_info', 99 );
+	// remove_action( 'genesis_before_entry_content', 'genesis_post_info', 99 );
 
 	// Reposition Post Image
-	remove_action( 'genesis_post_content', 'genesis_do_post_image' );
-	add_action( 'genesis_before_post', 'genesis_do_post_image' );
+	// remove_action( 'genesis_post_content', 'genesis_do_post_image' );
+	// add_action( 'genesis_before_post', 'genesis_do_post_image' );
 
 }
