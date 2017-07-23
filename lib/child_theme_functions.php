@@ -9,13 +9,6 @@
  * Add any functions here that you wish to use sitewide.
  */
 
-
-// Change favicon location
-function obm_custom_favicon_location( $favicon_url ) {
-	return get_stylesheet_directory_uri() . '/images/favicon.ico';
-}
-
-
 // Change the footer credits
 function obm_footer_cred( $obm_ft ) {
 
