@@ -1216,6 +1216,7 @@ img.alignright,
 /* ## Responsive Navigation
 --------------------------------------------- */
 
+/* Only used if responsive-menu.js is active */
 .responsive-menu-icon {
 	cursor: pointer;
 	display: none;
@@ -1225,7 +1226,7 @@ img.alignright,
 .responsive-menu-icon::before {
 	content: "\f0c9";
 	display: inline-block;
-	font: normal 20px/1 'FontAwesome';
+	font-family: "Font Awesome 5 Regular";
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
@@ -1233,14 +1234,9 @@ img.alignright,
 
 /* Sidr Menu */
 
-.responsive-menu-icon-sidr {
-	cursor: pointer;
-	color: #ffffff;
-	text-transform: uppercase;
-}
-
-.responsive-menu-icon-sidr span {
-	padding-right: 8px;
+#mobile-header svg {
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 .sidr{display:block;position:fixed;top:0;height:100%;z-index:999999;width:240px;overflow-x:hidden;overflow-y:auto;background:#333333;box-shadow:0 0 5px 5px #222 inset;}
@@ -1270,7 +1266,7 @@ img.alignright,
 .sidr input[type=button],.sidr input[type=submit]{color:#333;background:#ffffff;}
 .sidr input[type=button]:hover,.sidr input[type=submit]:hover{background:rgba(255,255,255,0.9);}
 
-#sidr-overlay{position:absolute;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:transparent;z-index:999998;display:none;}
+#sidr-overlay{position:absolute;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.5);z-index:999998;display:none;}
 .sidr-open #sidr-overlay{display: block;}
 
 /* # Content Area

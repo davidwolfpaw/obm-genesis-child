@@ -21,8 +21,8 @@ function obm_scripts_and_styles() {
    	// register our stylesheet
 	wp_register_style( 'obm-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 
-    // Font Awesome http://fortawesome.github.io/Font-Awesome
-    wp_register_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' , array(), '4.7.0', 'all' );
+    // Font Awesome http://fontawesome.com
+    wp_register_script( 'fontawesome5', get_stylesheet_directory_uri() . '/js/fontawesome-all.min.js', '', '5.0.2' );
 
     // Register scripts to load in site header
     wp_register_script( 'obm-modernizr', get_stylesheet_directory_uri() . '/js/modernizr.custom.min.js', '', '3.3.1', true );
@@ -34,19 +34,45 @@ function obm_scripts_and_styles() {
 
     // Enqueue styles
     wp_enqueue_style( 'obm-stylesheet' );
-    wp_enqueue_style( 'fontawesome' );
 
     // Enqueue scripts
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'obm-js' );
     wp_enqueue_script( 'obm-modernizr' );
     wp_enqueue_script( 'obm-sidr' );
+    wp_enqueue_script( 'fontawesome5' );
     // wp_enqueue_script( 'obm-responsive-menu' );
 
     // deregister the superfish scripts
     wp_deregister_script( 'superfish' );
     wp_deregister_script( 'superfish-args' );
 
+}
+
+
+// setup FontAwesome 5 SVGs for use
+add_action( 'wp_head', function() {
+    echo '<script>FontAwesomeConfig = { searchPseudoElements: true };</script>';
+}, 1 );
+
+
+// defer loading of scripts
+add_filter( 'script_loader_tag', 'obm_defer_scripts', 10, 3 );
+function obm_defer_scripts( $tag, $handle, $src ) {
+
+    // The handles of the enqueued scripts we want to defer
+    $defer_scripts = array(
+        'obm-js',
+        'obm-modernizr',
+        'obm-sidr',
+        'fontawesome5',
+    );
+
+    if ( in_array( $handle, $defer_scripts ) ) {
+        return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
+    }
+
+    return $tag;
 }
 
 
