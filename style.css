@@ -5,7 +5,7 @@ Description: Child Theme created for the Genesis Framework.
 Author: Orange Blossom Media
 Author URI: https://orangeblossommedia.com/
 Template: genesis
-Template Version: 2.5.2
+Template Version: 2.5.3
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready
 License: GPL-3.0+
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -59,6 +59,8 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 	- Max-width: 1280px
 	- Max-width: 1023px
 	- Max-width: 880px
+	- Max-width: 768px
+	- Max-width: 600px
 - Print Styles
 */
 
@@ -76,15 +78,15 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 --------------------------------------------- */
 
 html,
-input[type="search"]{
+input[type="search"] {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
 	box-sizing:         border-box;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -92,36 +94,36 @@ input[type="search"]{
 /* ## Float Clearing
 --------------------------------------------- */
 
-.author-box:before,
-.clearfix:before,
-.entry:before,
-.entry-content:before,
-.nav-primary:before,
-.nav-secondary:before,
-.pagination:before,
-.site-container:before,
-.site-footer:before,
-.site-header:before,
-.site-inner:before,
-.widget:before,
-.wrap:before {
+.author-box::before,
+.clearfix::before,
+.entry::before,
+.entry-content::before,
+.nav-primary::before,
+.nav-secondary::before,
+.pagination::before,
+.site-container::before,
+.site-footer::before,
+.site-header::before,
+.site-inner::before,
+.widget::before,
+.wrap::before {
 	content: " ";
 	display: table;
 }
 
-.author-box:after,
-.clearfix:after,
-.entry:after,
-.entry-content:after,
-.nav-primary:after,
-.nav-secondary:after,
-.pagination:after,
-.site-container:after,
-.site-footer:after,
-.site-header:after,
-.site-inner:after,
-.widget:after,
-.wrap:after {
+.author-box::after,
+.clearfix::after,
+.entry::after,
+.entry-content::after,
+.nav-primary::after,
+.nav-secondary::after,
+.pagination::after,
+.site-container::after,
+.site-footer::after,
+.site-header::after,
+.site-inner::after,
+.widget::after,
+.wrap::after {
 	clear: both;
 	content: " ";
 	display: table;
@@ -168,16 +170,6 @@ textarea:focus,
 	-ms-transition:     all 0.1s ease-in-out;
 	-o-transition:      all 0.1s ease-in-out;
 	transition:         all 0.1s ease-in-out;
-}
-
-::-moz-selection {
-	background-color: #333333;
-	color: #ffffff;
-}
-
-::selection {
-	background-color: #333333;
-	color: #ffffff;
 }
 
 a {
@@ -248,7 +240,6 @@ pre {
 }
 
 
-
 /* ## Headings
 --------------------------------------------- */
 
@@ -261,7 +252,7 @@ h6 {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	font-weight: 700;
 	line-height: 1.2;
-	margin: 0 0 8px;
+	margin: 0 0 12px;
 }
 
 h1 {
@@ -324,7 +315,7 @@ img {
 
 .gallery-item {
 	float: left;
-	margin: 0 0 32px;
+	margin: 0 0 28px;
 	text-align: center;
 }
 
@@ -374,6 +365,7 @@ img {
 /* ## Forms
 --------------------------------------------- */
 
+input,
 input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -404,6 +396,7 @@ textarea {
 	width: 100%;
 }
 
+input:hover,
 input[type="color"]:hover,
 input[type="date"]:hover,
 input[type="datetime"]:hover,
@@ -422,6 +415,7 @@ textarea:hover, select:hover {
 	border-color: #e0e0e0;
 }
 
+input:focus,
 input[type="color"]:focus,
 input[type="date"]:focus,
 input[type="datetime"]:focus,
@@ -481,7 +475,6 @@ input[type="submit"],
 	cursor: pointer;
 	font-weight: 300;
 	padding: 16px 24px;
-	text-transform: uppercase;
 	width: auto;
 }
 
@@ -489,12 +482,18 @@ button:hover,
 input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"],
-.button:hover {
+.button:hover,
+button:focus,
+input:focus[type="button"],
+input:focus[type="reset"],
+input:focus[type="submit"],
+.button:focus {
 	background-color: #e5554e;
 	color: #ffffff;
 }
 
-.entry-content .button:hover {
+.entry-content .button:hover,
+.entry-content .button:focus {
 	color: #ffffff;
 }
 
@@ -541,7 +540,6 @@ input[type="search"]::-webkit-search-results-button {
 	width: 100%;
 }
 
-
 /* ## Tables
 --------------------------------------------- */
 
@@ -583,24 +581,25 @@ th {
 	width: 1px;
 	border: 0;
 	overflow: hidden;
+	word-wrap: normal !important;
 }
 
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .genesis-nav-menu .search input[type="submit"]:focus,
-.widget_search input[type="submit"]:focus  {
+.widget_search input[type="submit"]:focus {
 	clip: auto !important;
 	height: auto;
 	width: auto;
 	display: block;
 	font-size: 1em;
 	font-weight: bold;
-	padding: 16px 23px 14px;
+	padding: 15px 23px 14px;
 	color: #333;
 	background: #fff;
 	z-index: 100000; /* Above WP toolbar. */
 	text-decoration: none;
-	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .more-link {
@@ -649,7 +648,7 @@ th {
 
 .content {
 	float: right;
-	width: 800px;
+	width: 780px;
 }
 
 .content-sidebar .content,
@@ -690,7 +689,6 @@ th {
 .content-sidebar-sidebar .sidebar-secondary {
 	float: right;
 }
-
 
 /* ## Column Classes
 --------------------------------------------- */
@@ -748,7 +746,6 @@ th {
 	margin-left: 0;
 }
 
-
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
 
@@ -781,7 +778,7 @@ th {
 
 .archive-description,
 .author-box {
-	margin-bottom: 56px;
+	margin-bottom: 60px;
 }
 
 .archive-description p:last-child,
@@ -798,7 +795,7 @@ th {
 
 .site-header .search-form {
 	float: right;
-	margin-top: 16px;
+	margin-top: 12px;
 }
 
 .entry-content .search-form,
@@ -816,7 +813,6 @@ th {
 	position: absolute;
 	width: 1px;
 }
-
 
 /* ## Titles
 --------------------------------------------- */
@@ -886,7 +882,7 @@ img.centered,
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 }
 
 a.alignleft,
@@ -1085,7 +1081,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 800px;
+	width: 780px;
 }
 
 
@@ -1117,7 +1113,7 @@ img.alignright,
 .genesis-nav-menu a:focus,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
-.genesis-nav-menu .sub-menu .current-menu-item > a:focus  {
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus {
 	color: #c3251d;
 	text-decoration: underline;
 }
@@ -1127,11 +1123,11 @@ img.alignright,
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
-	-webkit-transition: opacity .4s ease-in-out;
-	-moz-transition:    opacity .4s ease-in-out;
-	-ms-transition:     opacity .4s ease-in-out;
-	-o-transition:      opacity .4s ease-in-out;
-	transition:         opacity .4s ease-in-out;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition:    opacity 0.4s ease-in-out;
+	-ms-transition:     opacity 0.4s ease-in-out;
+	-o-transition:      opacity 0.4s ease-in-out;
+	transition:         opacity 0.4s ease-in-out;
 	width: 210px;
 	z-index: 99;
 }
@@ -1142,14 +1138,14 @@ img.alignright,
 	border-top: 0;
 	font-size: 14px;
 	font-size: 1.4rem;
-	padding: 24px;
+	padding: 20px;
 	position: relative;
-	width: 200px;
+	width: 210px;
 	word-wrap: break-word;
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
-	margin: -56px 0 0 199px;
+	margin: -56px 0 0 209px;
 }
 
 .genesis-nav-menu .menu-item:hover {
@@ -1168,27 +1164,6 @@ img.alignright,
 .genesis-nav-menu > .last > a {
 	padding-right: 0;
 }
-
-.genesis-nav-menu > .right {
-	color: #ffffff;
-	float: right;
-	list-style-type: none;
-	padding: 32px 0;
-}
-
-.genesis-nav-menu > .right > a {
-	display: inline;
-	padding: 0;
-}
-
-.genesis-nav-menu > .rss > a {
-	margin-left: 48px;
-}
-
-.genesis-nav-menu > .search {
-	padding: 8px 0 0;
-}
-
 
 /* ## Accessible Menu
 --------------------------------------------- */
@@ -1216,7 +1191,6 @@ img.alignright,
 .nav-primary,
 .nav-secondary {
 }
-
 .nav-primary {
 	background-color: #333333;
 }
@@ -1238,7 +1212,6 @@ img.alignright,
 .nav-secondary {
 	background-color: #ffffff;
 }
-
 
 /* ## Responsive Navigation
 --------------------------------------------- */
@@ -1300,7 +1273,6 @@ img.alignright,
 #sidr-overlay{position:absolute;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:transparent;z-index:999998;display:none;}
 .sidr-open #sidr-overlay{display: block;}
 
-
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 
@@ -1335,7 +1307,6 @@ img.alignright,
 	color: #dddddd;
 }
 
-
 /* ## Entry Meta
 --------------------------------------------- */
 
@@ -1363,7 +1334,6 @@ p.entry-meta {
 	border-top: 2px solid #f5f5f5;
 	padding-top: 24px;
 }
-
 
 /* ## Pagination
 --------------------------------------------- */
@@ -1621,7 +1591,6 @@ p.entry-meta {
 
 }
 
-
 @media only screen and (max-width: 768px) {
 
 	.one-fourth,
@@ -1787,6 +1756,7 @@ p.entry-meta {
 		top: -46px;
 	}
 
+}
 
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -1794,8 +1764,8 @@ p.entry-meta {
 @media print {
 
 	*,
-	*:before,
-	*:after {
+	*::before,
+	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
 		color: #000 !important;
@@ -1807,17 +1777,17 @@ p.entry-meta {
 		text-decoration: underline;
 	}
 
-	a[href]:after {
+	a[href]::after {
 		content: " (" attr(href) ")";
 	}
 
-	abbr[title]:after {
+	abbr[title]::after {
 		content: " (" attr(title) ")";
 	}
 
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after,
-	.site-title > a:after {
+	a[href^="javascript:"]::after,
+	a[href^="#"]::after,
+	.site-title > a::after {
 		content: "";
 	}
 
@@ -1932,34 +1902,3 @@ p.entry-meta {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ## Responsive Navigation
---------------------------------------------- */
-/*
-#responsive-menu {
-	display: none;
-	visibility: hidden;
-}
-
-@media only screen and (min-width: 961px) {
-	#mobile-header {
-	    display: none;
-	}
-}
-
-
-*/
