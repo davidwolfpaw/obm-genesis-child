@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
                 $('.nav-header').hide();
 
                 // prepend menu icon for header-right menu
-                $('.header-widget-area .widget-wrap').prepend('<div id="mobile-header"><a class="responsive-menu-button far fa-bars" href="#sidr"></a></div>');
+                $('.header-widget-area .widget-wrap').prepend('<div id="mobile-header"><a title="Navigation Menu" class="responsive-menu-button far fa-bars" href="#sidr"></a></div>');
 
                 $('#mobile-header').sidr({
                     name: 'sidr',
