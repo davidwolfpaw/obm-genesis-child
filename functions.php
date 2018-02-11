@@ -15,6 +15,9 @@ define( 'CHILD_THEME_URL', 'http://obm-genesis-child.com/' );
 
 /* --- THEME SETUP --- */
 
+// Start the Genesis engine.
+require_once get_template_directory() . '/lib/init.php';
+
 // Activate the child theme.
 add_action( 'genesis_setup', 'obm_theme_setup', 15 );
 /**
