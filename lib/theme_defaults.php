@@ -1,7 +1,21 @@
 <?php
+/**
+ * OBM-Genesis-Child Theme Setting Defaults
+ *
+ * This file holds theme setting defaults
+ *
+ * Child Theme Name: OBM-Genesis-Child
+ * Author: Orange Blossom Media
+ * Url: https://orangeblossommedia.com/
+ *
+ * @package OBM-Genesis-Child
+ */
 
-//* OBM-Genesis-Child Theme Setting Defaults
-add_filter( 'genesis_theme_settings_defaults', 'obm_theme_theme_defaults' );
+/**
+ * Defaults setup by this theme
+ *
+ * @param array $defaults Array of default general theme settings.
+ */
 function obm_theme_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 3;
@@ -15,12 +29,14 @@ function obm_theme_theme_defaults( $defaults ) {
 	return $defaults;
 
 }
+add_filter( 'genesis_theme_settings_defaults', 'obm_theme_theme_defaults' );
 
-//* OBM-Genesis-Child Theme Setup
-add_action( 'after_switch_theme', 'obm_theme_theme_setting_defaults' );
+/**
+ * OBM-Genesis-Child Theme Setup.
+ */
 function obm_theme_theme_setting_defaults() {
 
-	if( function_exists( 'genesis_update_settings' ) ) {
+	if ( function_exists( 'genesis_update_settings' ) ) {
 
 		genesis_update_settings( array(
 			'blog_cat_num'              => 3,
@@ -56,9 +72,13 @@ function obm_theme_theme_setting_defaults() {
 	update_option( 'posts_per_page', 3 );
 
 }
+add_action( 'after_switch_theme', 'obm_theme_theme_setting_defaults' );
 
-//* Set Genesis Responsive Slider defaults
-add_filter( 'genesis_responsive_slider_settings_defaults', 'obm_theme_responsive_slider_defaults' );
+/**
+ * Set Genesis Responsive Slider defaults.
+ *
+ * @param array $defaults Array of default responsive slider settings.
+ */
 function obm_theme_responsive_slider_defaults( $defaults ) {
 
 	$args = array(
@@ -80,3 +100,4 @@ function obm_theme_responsive_slider_defaults( $defaults ) {
 
 	return $args;
 }
+add_filter( 'genesis_responsive_slider_settings_defaults', 'obm_theme_responsive_slider_defaults' );
