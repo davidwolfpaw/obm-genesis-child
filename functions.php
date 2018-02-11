@@ -64,6 +64,16 @@ function obm_theme_setup() {
 		'footer',
 	) );
 
+	// Add Genesis Accessibility Components.
+	add_theme_support( 'genesis-accessibility', array(
+		'404-page',
+		'drop-down-menu',
+		'headings',
+		'rems',
+		'search-form',
+		'skip-links',
+	) );
+
 	// Menus.
 	add_theme_support( 'genesis-menus', array(
 		'primary'   => 'Primary Navigation Menu',
@@ -144,7 +154,7 @@ function obm_theme_setup() {
 		'width'           => 200,
 	) );
 
-	// Reposition the navigation/
+	// Reposition the navigation.
 	remove_action( 'genesis_after_header', 'genesis_do_nav' );
 	add_action( 'genesis_before_header', 'genesis_do_nav' );
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
