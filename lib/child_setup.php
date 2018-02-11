@@ -82,6 +82,24 @@ function obm_defer_scripts( $tag, $handle, $src ) {
 }
 add_filter( 'script_loader_tag', 'obm_defer_scripts', 10, 3 );
 
+/**
+ * Add a body class for page templates
+ *
+ * @param array $classes The array of body classes.
+ */
+function obm_body_classes( $classes ) {
+
+	if ( is_page_template() && false !== get_page_template_slug() ) {
+		$template       = basename( get_page_template_slug() );
+		$template_class = str_replace( '.php', '', $template );
+		$classes[]      = $template_class;
+	}
+
+	return $classes;
+
+}
+add_filter( 'body_class', 'obm_body_classes' );
+
 
 /************* OTHER SETUP FUNCTIONS *************/
 
