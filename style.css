@@ -614,7 +614,8 @@ th {
 --------------------------------------------- */
 
 .site-inner,
-.wrap {
+.wrap,
+#content-sidebar-wrap {
 	margin: 0 auto;
 	max-width: 1200px;
 }
@@ -629,18 +630,18 @@ th {
 
 /* ### Wrapping div for .content and .sidebar-primary */
 
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
+.content-sidebar-sidebar #content-sidebar-wrap,
+.sidebar-content-sidebar #content-sidebar-wrap,
+.sidebar-sidebar-content #content-sidebar-wrap {
 	width: 980px;
 }
 
-.content-sidebar-sidebar .content-sidebar-wrap {
+.content-sidebar-sidebar #content-sidebar-wrap {
 	float: left;
 }
 
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
+.sidebar-content-sidebar #content-sidebar-wrap,
+.sidebar-sidebar-content #content-sidebar-wrap {
 	float: right;
 }
 
@@ -1475,13 +1476,14 @@ p.entry-meta {
 @media only screen and (max-width: 1280px) {
 
 	.site-inner,
-	.wrap {
+	.wrap,
+	#content-sidebar-wrap {
 		max-width: 960px;
 	}
 
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-sidebar-content .content-sidebar-wrap {
+	.content-sidebar-sidebar #content-sidebar-wrap,
+	.sidebar-content-sidebar #content-sidebar-wrap,
+	.sidebar-sidebar-content #content-sidebar-wrap {
 		width: 720px;
 	}
 
@@ -1506,19 +1508,20 @@ p.entry-meta {
 @media only screen and (max-width: 1020px) {
 
 	.site-inner,
-	.wrap {
+	.wrap,
+	#content-sidebar-wrap {
 		max-width: 800px;
 	}
 
 	.content,
 	.content-sidebar-sidebar .content,
-	.content-sidebar-sidebar .content-sidebar-wrap,
+	.content-sidebar-sidebar #content-sidebar-wrap,
 	.sidebar-content-sidebar .content,
-	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar #content-sidebar-wrap,
 	.sidebar-primary,
 	.sidebar-secondary,
 	.sidebar-sidebar-content .content,
-	.sidebar-sidebar-content .content-sidebar-wrap,
+	.sidebar-sidebar-content #content-sidebar-wrap,
 	.site-header .widget-area,
 	.title-area {
 		width: 100%;
@@ -1561,7 +1564,8 @@ p.entry-meta {
 @media only screen and (max-width: 880px) {
 
 	.site-inner,
-	.wrap {
+	.wrap,
+	#content-sidebar-wrap {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
