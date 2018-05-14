@@ -144,8 +144,8 @@ html {
 
 html {
 	font-size: 62.5%; /* 10px browser default */
-	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Chrome fix */
@@ -246,8 +246,8 @@ blockquote::before {
 }
 
 pre {
-	tab-size: 4;
 	overflow: auto;
+	tab-size: 4;
 	white-space: pre-wrap;
 	width: 100%;
 }
@@ -426,9 +426,9 @@ select,
 textarea {
 	border-color: #e0e0e0;
 	border-radius: 3px;
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-	border-width: 1px;
 	border-style: solid;
+	border-width: 1px;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 	color: #474e57;
 	font-size: 16px;
 	font-weight: 400;
@@ -1628,7 +1628,6 @@ p.entry-meta {
 	--------------------------------------------- */
 
 	.site-header {
-		position: fixed;
 		width: 100%;
 		z-index: 9999;
 	}
