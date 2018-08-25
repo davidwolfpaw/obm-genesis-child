@@ -11,7 +11,7 @@
 
 define( 'CHILD_THEME_NAME', 'obm-genesis-child' );
 define( 'CHILD_THEME_URL', 'http://obm-genesis-child.com/' );
-define( 'CHILD_THEME_VERSION', '1.1.0' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 /* --- THEME SETUP --- */
 

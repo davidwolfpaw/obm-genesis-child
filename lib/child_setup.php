@@ -23,14 +23,14 @@ function obm_scripts_and_styles() {
 	wp_register_style( 'obm-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 
 	// Font Awesome http://fontawesome.com.
-	wp_register_script( 'fontawesome5', get_stylesheet_directory_uri() . '/js/fontawesome-all.min.js', '', '5.0.2' );
+	wp_register_script( 'fontawesome5', get_stylesheet_directory_uri() . '/js/fontawesome-all.min.js', '', '5.2.0' );
 
 	// Register scripts to load in site header.
-	wp_register_script( 'obm-modernizr', get_stylesheet_directory_uri() . '/js/modernizr.custom.min.js', '', '3.3.1', true );
+	wp_register_script( 'obm-modernizr', get_stylesheet_directory_uri() . '/js/modernizr.custom.min.js', '', '3.6.0', true );
 
 	// Register scripts to load in site footer.
 	wp_register_script( 'obm-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.0', true );
-	wp_register_script( 'obm-sidr', get_stylesheet_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '2.2.1', true );
+	wp_register_script( 'obm-sidr', get_stylesheet_directory_uri() . '/js/jquery.sidr.min.js', array( 'jquery' ), '3.0.0', true );
 	wp_register_script( 'obm-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
 	// Enqueue styles.
